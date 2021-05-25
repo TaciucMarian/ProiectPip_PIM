@@ -131,15 +131,15 @@ public class gui extends JFrame{
 			
 			@Override
 			public void valueChanged(TreeSelectionEvent e) {
-				Object node = tree_1.getLastSelectedPathComponent();
+				DefaultMutableTreeNode node = (DefaultMutableTreeNode)tree_1.getLastSelectedPathComponent();
 
 			    if (node == null)
 			    	return;
 			    //Nothing is selected.
 			    
 
-			    Object nodeInfo = ((DefaultMutableTreeNode) node).getUserObject();
-			    if (((DefaultMutableTreeNode) node).isLeaf()) {
+			    Object nodeInfo = node.getUserObject();
+			    if (node.isLeaf()) {
 			        System.out.println(node);
 			        
 			    } 
